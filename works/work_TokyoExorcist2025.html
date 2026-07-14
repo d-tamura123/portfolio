@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Tokyo Exorcist 2025 | Works</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="ホラーオカルトを題材にした、エクソシスト視点で異界を探索するアクションRPG『Tokyo Exorcist 2025』の作品紹介ページです。">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="./img/title_logo.png" alt="Daisuke Tamura Logo" class="logo-img">
+        </a>
+      </h1>
+
+      <nav>
+        <ul class="nav">
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="works.html">Works</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container work-box">
+
+      <p style="text-align:right; margin-bottom:20px;">
+        <a href="../works.html">← Works 一覧へ戻る</a>
+      </p>
+    
+      <section class="work-header">
+        <h1>Tokyo Exorcist 2025</h1>
+        <p class="work-tagline">ホラーオカルト × エクソシスト視点アクションRPG</p>
+      </section>
+
+      <section class="work-summary">
+        <h2>概要</h2>
+        <p>
+          本作はホラーオカルトを題材にした、エクソシスト視点で異界を探索するアクションRPGです。<br>
+          不気味な雰囲気と探索要素を重視し、霊視や疑似3Dサウンドによって「オカルト世界を体験する感覚」を強調しています。
+        </p>
+
+        <h3>動作環境</h3>
+        <ul>
+          <li>OS: Windows 10 / 11</li>
+          <li>CPU: Intel Core i5 相当以上推奨</li>
+          <li>メモリ: 4GB以上</li>
+          <li>グラフィック: DirectX 11 対応</li>
+          <li>入力: ゲームパッド必須（Xboxコントローラ基準）</li>
+        </ul>
+      </section>
+
+      <section class="work-videos">
+        <h2>ゲーム映像</h2>
+
+      <div class="video-slider">
+        <div class="video-container active">
+          <iframe src="https://www.youtube.com/embed/hV_Ot0c4xdM"
+            title="Tokyo Exorcist 2025 - Title" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/Wu_5tKdCXCU"
+            title="Tokyo Exorcist 2025 - Gameplay" allowfullscreen></iframe>
+        </div>
+
+        <!-- Steam風：中央下部に配置するタブ -->
+        <div class="video-tabs">
+          <button class="tab-button active" data-index="0">タイトル動画</button>
+          <button class="tab-button" data-index="1">プレイ動画</button>
+        </div>
+      </div>
+
+      </section>
+
+      <section class="work-tech">
+        <h2>技術的ポイント</h2>
+        <ul>
+          <li>
+            <strong>ゲーム基盤の自作:</strong>
+            シーン管理・入力レイヤー・イベント・ミッション・マップなどを独自フレームワークとして構築。
+          </li>
+          <li>
+            <strong>データ駆動設計:</strong>
+            キャラ配置・ミッション進行・イベントを JSON / CSV で管理し、マスターデータからゲーム内へロード。
+          </li>
+          <li>
+            <strong>外部ツール連携:</strong>
+            Tiled Editor ＋ Tileson を導入し、マップデータを外部化して工数削減とレベルデザインの柔軟性を確保。
+          </li>
+          <li>
+            <strong>疑似3Dサウンド:</strong>
+            距離減衰＋方向性SE＋BGMフェードにより、敵接近や緊張感を音響で表現。
+          </li>
+          <li>
+            <strong>霊視システム:</strong>
+            右トリガー入力で霊が可視化される「霊視」を実装し、視覚・聴覚の両面からオカルト体験を強化。
+          </li>
+          <li>
+            <strong>ミッション／イベント連携:</strong>
+            ミッション進行に応じて NPC・モンスター・イベントを切り替える仕組みを構築し、シナリオ進行を制御。
+          </li>
+          <li>
+            <strong>SpriteTool（自作ツール）:</strong>
+            Unity の 3D キャラクターをスプライトシート画像に変換するための  
+            自作ツールを開発し、アニメーション素材の制作工数を大幅に削減。  
+            <a href="https://github.com/d-tamura123/SpriteTool" target="_blank" rel="noopener">
+              GitHub リポジトリ
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="work-tech">
+        <h2>使用技術（Tech Stack）</h2>
+        <ul>
+          <li><strong>C++17</strong></li>
+          <li><strong>DXLib（DirectX 11）</strong></li>
+        </ul>
+      </section>
+
+      <section class="work-tech">
+        <h2>制作領域（Scope）</h2>
+        <ul>
+          <li>
+            <strong>ゲーム基盤の構築：</strong>
+            シーン管理、入力レイヤー、イベント、ミッション、マップ管理など  
+            ゲーム全体のロジックと仕組みを自作。
+          </li>
+          <li>
+            <strong>データ駆動設計：</strong>
+            JSON / CSV によるマスターデータ管理、ロード処理の実装。
+          </li>
+          <li>
+            <strong>マップ／レベルデザイン：</strong>
+            Tiled Editor を用いたマップ制作、Tileson によるデータ連携。
+          </li>
+          <li>
+            <strong>音響システム：</strong>
+            疑似3Dサウンド、距離減衰、方向性SE、BGMフェードの実装。
+          </li>
+          <li>
+            <strong>UI／演出：</strong>
+            メニュー、ステータス表示などの基本的な UI 実装。
+          </li>
+          <li>
+            <strong>アート／素材管理：</strong>
+            フリー素材の選定・加工・統合。
+          </li>
+        </ul>
+      </section>
+
+      <section class="work-meta">
+        <h2>開発情報</h2>
+        <ul>
+          <li><strong>バージョン:</strong> Ver 0.0.0.1（初回配布版）</li>
+          <li><strong>開発年:</strong> 2025</li>
+          <li><strong>著作権:</strong> © D.Tamura 2025</li>
+          <li><strong>ソースコード / 詳細:</strong> <a href="https://github.com/d-tamura123/tokyo_exorcist_2025" target="_blank" rel="noopener">GitHub プロフィール</a></li>
+        </ul>
+      </section>
+      
+      <p style="text-align:right; margin-top:30px;">
+        <a href="../works.html">← Works 一覧へ戻る</a>
+      </p>
+
+    </div>
+  </main>
+  
+  <!-- DOM 動画切り替えの青ぽち -->
+  <script src="../js/videoSlider.js"></script>
+</body>
+</html>

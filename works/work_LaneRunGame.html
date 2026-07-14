@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>レーン横断系ランゲーム（仮） | Works</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="クロッシーロード風のレーン横断系ランゲーム（仮）の作品紹介ページです。">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="./img/title_logo.png" alt="Daisuke Tamura Logo" class="logo-img">
+        </a>
+      </h1>
+
+      <nav>
+        <ul class="nav">
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="works.html">Works</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container work-box">
+
+      <p style="text-align:right; margin-bottom:20px;">
+        <a href="../works.html">← Works 一覧へ戻る</a>
+      </p>
+
+      <!-- タイトル -->
+      <section class="work-header">
+        <h1>レーン横断系ランゲーム（仮）</h1>
+        <p class="work-tagline">クロッシーロード風 × チーム制作ランゲーム</p>
+      </section>
+
+      <!-- 概要 -->
+      <section class="work-summary">
+        <h2>概要</h2>
+        <p>
+          Hipster Whale社の <strong>Crossy Road</strong> を参考に、  
+          手触りのよいランゲームをチームで制作しました（スプリント開発）。<br>
+          私は主に <strong>グリッド管理</strong> を担当し、  
+          ステージ生成や障害物の配置ロジックなどコア部分を実装しました。
+        </p>
+
+        <h3>動作環境</h3>
+        <p>
+          チームとして正式な動作環境は定めていませんが、  
+          <strong>Unity 6000.0.24.f1 の標準的な動作環境</strong> を満たしていれば問題なく動作します。<br>
+          （OS・CPU・GPU などは特に厳密な要件なし）
+        </p>
+      </section>
+
+      <!-- ゲーム映像 -->
+      <section class="work-videos">
+        <h2>ゲーム映像</h2>
+        <p>プレイ動画は後日追加予定です。</p>
+      </section>
+
+      <!-- 技術的ポイント（詳細のみ） -->
+      <section class="work-tech">
+        <h2>技術的ポイント</h2>
+        <ul>
+          <li>
+            <strong>チーム制作の開発効率向上：</strong><br>
+            空実装のインターフェースを先に作成し、  
+            呼び出し側の認識共有を図ることでスプリント開発を円滑化。
+          </li>
+
+          <li>
+            <strong>簡易的な設計資料の作成：</strong><br>
+            メンバー間の認識共有のため、以下の設計資料を作成。<br>
+            ・ステージ生成・管理設計：  
+            <a href="https://app.notion.com/p/28aa0c4391ad80c4a44cd22f0282522c" target="_blank" rel="noopener">
+              Notion ページ
+            </a><br>
+            ・ステージ自動生成設計方針：  
+            <a href="https://app.notion.com/p/28ba0c4391ad8089907acb08c54f1fd3" target="_blank" rel="noopener">
+              Notion ページ
+            </a>
+          </li>
+
+          <li>
+            <strong>疎結合な設計：</strong><br>
+            プレイヤー移動とグリッド管理のやり取りを  
+            なるべく疎結合となるように設計し、保守性を向上。
+          </li>
+
+          <li>
+            <strong>初心者に配慮した難易度設計：</strong><br>
+            クロッシーロードは難易度が高く先に進みにくいため、  
+            本作では障害物密度の上昇を緩やかにし、  
+            初心者でも楽しめる難易度カーブを採用。
+          </li>
+        </ul>
+      </section>
+
+      <!-- 使用技術（Tech Stack） -->
+      <section class="work-tech">
+        <h2>使用技術（Tech Stack）</h2>
+        <ul>
+          <li><strong>Unity 6000.0.24.f1</strong></li>
+        </ul>
+      </section>
+
+      <!-- 制作領域（Scope） -->
+      <section class="work-tech">
+        <h2>制作領域（Scope）</h2>
+        <ul>
+          <li><strong>グリッド管理</strong>（ステージ管理の基盤）</li>
+          <li><strong>ステージ自動生成</strong>（進行に応じて難易度が上昇）</li>
+          <li><strong>障害物の実装</strong>（静止障害物・流れる障害物・橋ギミック）</li>
+        </ul>
+      </section>
+
+      <!-- 開発情報 -->
+      <section class="work-meta">
+        <h2>開発情報</h2>
+        <ul>
+          <li><strong>開発年:</strong> 2025</li>
+          <li><strong>著作権:</strong> © GLab@バンタンゲームアカデミー</li>
+          <li>
+            <strong>ソースコード / 詳細:</strong>
+            <a href="https://github.com/VGA-GLAB/2025_CrossyRoad" target="_blank" rel="noopener">
+              GitHub リポジトリ
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <p style="text-align:right; margin-top:30px;">
+        <a href="../works.html">← Works 一覧へ戻る</a>
+      </p>
+
+    </div>
+  </main>
+
+</body>
+</html>

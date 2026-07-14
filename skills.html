@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills | Daisuke Tamura</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="./img/title_logo.png" alt="Daisuke Tamura Logo" class="logo-img">
+        </a>
+      </h1>
+
+      <nav>
+        <ul class="nav">
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="works.html">Works</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container about">
+
+      <h2>Skills</h2>
+
+      <!-- Core Skills（主役カード） -->
+      <div class="core-grid">
+
+        <div class="core-card">
+          <img src="./img/cpp_icon.png" alt="C++ Icon" class="core-icon">
+          <div class="core-title">C++</div>
+          <p>ゲームロジック / システム構築の中心。安定した仕組みづくりが得意。</p>
+        </div>
+
+        <div class="core-card">
+          <img src="./img/dxlib_icon.png" alt="DXLib Icon" class="core-icon">
+          <div class="core-title">DXLib</div>
+          <p>2D/3D 表示、ゲーム基盤の実装。低レイヤー寄りの開発経験。</p>
+        </div>
+
+        <div class="core-card">
+          <img src="./img/unity_icon.png" alt="Unity Icon" class="core-icon">
+          <div class="core-title">Unity（C#）</div>
+          <p>グリッド管理、自動生成、チーム制作での実装経験。</p>
+        </div>
+
+      </div>
+
+      <!-- Core Skills（詳細） -->
+      <h3 class="skill-subhead">Core Skills（詳細）</h3>
+
+      <div class="core-detail">
+
+        <h4>C++</h4>
+        <p>
+          ゲームロジックや基盤部分を構造から組み立てる際の中心言語。
+          メモリ管理・データ構造・制御フローを意識した低レイヤー寄りの実装が得意で、
+          破綻しない構造と理解しやすいロジックを重視しています。
+          DXLib や DirectX9 を用いた低レイヤー実装に加え、
+          Tiled Editor との連携や tileson を用いたマップデータのパースなど、
+          既存の仕組みを柔軟に組み合わせて開発を進めています。
+          また、自作ツール（<a href="https://github.com/d-tamura123/SpriteTool" target="_blank">SpriteTool</a>）を開発し、アセット作成やワークフローの効率化も行っています。
+        </p>
+
+        <h4>DXLib</h4>
+        <p>
+          C++ による比較的低レイヤーの実装経験として使用。
+          描画・入力・更新などゲームループの基盤を自前で構築し、
+          挙動の安定性を意識した実装を行っています。
+        </p>
+
+        <h4>Unity（C#）</h4>
+        <p>
+          グリッド管理や自動生成など、仕組みづくり寄りの実装を担当。
+          データ駆動やエディタ拡張など、ゲーム体験を支えるロジック部分を中心に扱います。
+        </p>
+
+      </div>
+
+      <!-- Supporting Skills -->
+      <h3 class="skill-subhead">Supporting Skills</h3>
+      <ul class="skill-small">
+        <li>
+          スクリプト言語（JS / Shell / VBA）  
+          — 調査・試作・ツール作成など、補助的な用途で活用。
+        </li>
+        <li>
+          Git / GitHub  
+          — 個人制作・チーム制作でのバージョン管理に使用。
+        </li>
+      </ul>
+
+      <!-- Foundational Knowledge -->
+      <h3 class="skill-subhead">Foundational Knowledge</h3>
+      <ul class="skill-small">
+        <li>
+          クラサバ型システム・データベース・ソケット通信  
+          — ゲーム内通信や同期処理の理解に活かせる基礎知識。
+        </li>
+        <li>
+          バッチ処理 / 大規模データ処理・基盤設計  
+          — 安定性・堅牢性を意識した設計経験として応用可能。
+        </li>
+      </ul>
+      
+      <!-- Experience Years -->
+      <h3 class="skill-subhead">Experience Years</h3>
+      <table class="exp-table">
+        <tr>
+          <th>技術</th>
+          <th>実務経験</th>
+          <th>総経験（趣味・学業含む）</th>
+        </tr>
+        <tr>
+          <td>C++</td>
+          <td>4年</td>
+          <td>約12年</td>
+        </tr>
+        <tr>
+          <td>DXLib</td>
+          <td>-</td>
+          <td>約4年</td>
+        </tr>
+        <tr>
+          <td>Unity（C#）</td>
+          <td>-</td>
+          <td>約2年</td>
+        </tr>
+        <tr>
+          <td>Git / GitHub</td>
+          <td>-</td>
+          <td>約2年</td>
+        </tr>
+        <tr>
+          <td>JS / Shell / VBA</td>
+          <td>7年</td>
+          <td>約15年</td>
+        </tr>
+      </table>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 Daisuke Tamura</p>
+      <p><a href="https://app.notion.com" class="notes-link">📝 Notes（Notion）</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

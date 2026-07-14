@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Works | Daisuke Tamura</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body id="top">
+  <!-- 固定サイドナビ -->
+  <nav class="side-nav">
+    <ul>
+      <li><a href="#top">Top</a></li>
+      <li><a href="#work1">Tokyo Exorcist 2025</a></li>
+      <!--
+      <li><a href="#work2">Game 2（準備中）</a></li>
+      -->
+      <li><a href="#work3">レーン横断系ランゲーム（仮）</a></li>
+    </ul>
+  </nav>
+
+  <header class="header">
+    <div class="container header-inner">
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="./img/title_logo.png" alt="Daisuke Tamura Logo" class="logo-img">
+        </a>
+      </h1>
+
+      <nav>
+        <ul class="nav">
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="works.html">Works</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container about">
+
+      <h2>Works</h2>
+      <p class="works-intro">
+        個人制作のゲーム・ツールの紹介です。  
+        各作品には概要・技術要素・動画を掲載しています。
+      </p>
+
+      <!-- Works Grid -->
+      <div class="works-grid">
+
+        <!-- Game 1 -->
+        <div id="work1" class="work-card">
+          <h3 class="work-title">
+            <a href="works/work_TokyoExorcist2025.html">Tokyo Exorcist 2025</a>
+          </h3>
+
+          <!-- サムネ代わりにタイトル動画だけ残す（軽量化） -->
+          <div class="work-video">
+            <iframe width="560" height="315"
+              src="https://www.youtube.com/embed/hV_Ot0c4xdM"
+              title="Tokyo Exorcist 2025 - Title" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <!-- 作品の情報 -->
+          <table class="work-info-table">
+            <tr>
+              <th>項目名</th>
+              <th>記載内容</th>
+            </tr>
+            <tr>
+              <td>タイトル</td>
+              <td>Tokyo Exorcist 2025</td>
+            </tr>
+            <tr>
+              <td>ジャンル</td>
+              <td>ホラーオカルト × エクソシスト視点アクションRPG</td>
+            </tr>
+            <tr>
+              <td>概要</td>
+              <td>ホラーオカルトを題材にした探索型アクションRPG。C++ / DXLib ベースでゲーム基盤から自作し、霊視や疑似3Dサウンドなどの独自要素を実装。</td>
+            </tr>
+            <tr>
+              <td>制作期間</td>
+              <td>6カ月</td>
+            </tr>
+            <tr>
+              <td>開発環境</td>
+              <td>C++, DXLib</td>
+            </tr>
+            <tr>
+              <td>対応入力機器</td>
+              <td>ゲームパッド必須（Xboxコントローラ基準）</td>
+            </tr>
+          </table>
+
+          <!-- 詳細へのリンク -->
+          <p class="work-detail-wrapper">
+            <a href="works/work_TokyoExorcist2025.html" class="work-detail-link">▶ 作品紹介ページを見る</a>
+          </p>
+          
+          <div class="work-links">
+            <!-- ソースコードへのリンク -->
+            <a href="https://github.com/d-tamura123/tokyo_exorcist_2025" class="work-link-item" target="_blank" rel="noopener">
+              <img src="img/GitHub_Invertocat_Black_Clearspace.png" alt="GitHub" class="work-link-icon">
+              GitHub でソースコードを見る
+            </a>
+
+            <!-- 実行ファイルへのリンク -->
+            <a href="https://dtamura.itch.io/tokyo-exorcist-2025" class="work-link-item" target="_blank" rel="noopener">
+              <img src="img/itch_badge.svg"
+                   alt="itch.io" class="work-link-icon">
+              itch.io で実行ファイルをダウンロード
+            </a>
+          </div>
+
+          
+        </div>
+
+        <!-- Game 2（後で追加） -->
+        <!--
+        <div id="work2" class="work-card">
+          <h3 class="work-title">Game 2（準備中）</h3>
+          <p class="work-desc">鋭意制作中。夏までに完成させて追加したい。。</p>
+        </div>
+		-->
+
+        <!-- Game 3 -->
+        <div id="work3" class="work-card">
+          <h3 class="work-title">
+            <a href="works/work_LaneRunGame.html">レーン横断系ランゲーム（仮）</a>
+          </h3>
+
+          <!-- 作品の情報 -->
+          <table class="work-info-table">
+            <tr>
+              <th>項目名</th>
+              <th>記載内容</th>
+            </tr>
+            <tr>
+              <td>タイトル</td>
+              <td>レーン横断系ランゲーム（仮）</td>
+            </tr>
+            <tr>
+              <td>ジャンル</td>
+              <td>レーン横断系ランゲーム</td>
+            </tr>
+            <tr>
+              <td>概要</td>
+              <td>チーム制作でクロッシーロード風ランゲームを題材に、シンプルで手触りの良いランゲームを制作しました。</td>
+            </tr>
+            <tr>
+              <td>制作期間</td>
+              <td>3カ月</td>
+            </tr>
+            <tr>
+              <td>開発環境</td>
+              <td>Unity</td>
+            </tr>
+            <tr>
+              <td>対応入力機器</td>
+              <td>キーボード</td>
+            </tr>
+          </table>
+
+          <!-- GitHub / Drive リンク -->
+          <div class="work-links">
+            <a href="https://github.com/VGA-GLAB/2025_CrossyRoad" class="work-link-item" target="_blank" rel="noopener">
+              <img src="img/GitHub_Invertocat_Black_Clearspace.png" alt="GitHub" class="work-link-icon">
+              GitHub でソースコードを見る
+            </a>
+
+            <p>
+              実行ファイルは準備中です。
+            </p>
+            <!--
+            <a href="https://drive.google.com/your-file-link" class="work-link-item" target="_blank" rel="noopener">
+              <img src="img/7uffzv9dk4sn-3AGHIcGci6RiNYtjf3Lfo2-4827a14a4409138cad096de1af549f60-drive_2026-192px.optimized.svg"
+                   alt="Google Drive" class="work-link-icon">
+              実行ファイルをダウンロード（Google Drive）
+            </a>
+            -->
+          </div>
+
+          <!-- 詳細ページへのリンク -->
+          <p class="work-detail-wrapper">
+            <a href="works/work_LaneRunGame.html" class="work-detail-link">
+              ▶ 作品紹介ページを見る
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 Daisuke Tamura</p>
+      <p><a href="https://app.notion.com" class="notes-link">📝 Notes（Notion）</a></p>
+    </div>
+  </footer>
+  
+  <!-- 詳細ページへのリンク -->
+  <script src="js/smoothScroll.js"></script>
+</body>
+</html>
