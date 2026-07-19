@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Icebreaker Command | Works</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body id="top">
+
+  <header class="header">
+    <div class="container header-inner">
+      <h1 class="logo">
+        <a href="../index.html">
+          <img src="../img/title_logo.png" alt="Daisuke Tamura Logo" class="logo-img">
+        </a>
+      </h1>
+
+      <nav>
+        <ul class="nav">
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../skills.html">Skills</a></li>
+          <li><a href="../works.html">Works</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container about">
+
+      <h2>Icebreaker Command（開発中）</h2>
+      <p class="works-intro">
+        FlowField に沿って自然に動く流氷を対処し、航路を防衛する逆タワーディフェンスゲームです。
+      </p>
+
+      <!-- 動画 -->
+      <h3 id="video">ティザー動画</h3>
+      <div class="work-video">
+        <iframe width="560" height="315"
+          src="https://www.youtube.com/embed/ci0UxAOlrBo"
+          title="Icebreaker Command - Teaser Trailer"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <!-- 概要 -->
+      <h3 id="overview">概要</h3>
+      <table class="work-info-table">
+        <tr><th>項目名</th><th>記載内容</th></tr>
+        <tr><td>タイトル</td><td>Icebreaker Command</td></tr>
+        <tr><td>ジャンル</td><td>逆タワーディフェンス（流氷溶解 × 航路防衛）</td></tr>
+        <tr>
+          <td>ゲーム概要</td>
+          <td>
+            温暖化の影響で流氷が増えた世界で、航路を守る国際組織「Icebreaker Command」の一員として活動するゲーム。  
+            流氷は FlowField に沿って自然に移動し、プレイヤーは砕氷船(流氷を溶かす船)を操作して NPC 交易船の航路を確保する。  
+          </td>
+        </tr>
+        <tr><td>制作期間</td><td>継続開発中（2026.6〜）</td></tr>
+        <tr><td>開発環境</td><td>C++, DXLib（3D）</td></tr>
+        <tr><td>対応入力機器</td><td>キーボード / マウス</td></tr>
+      </table>
+
+      <!-- 技術要素 -->
+      <h3 id="tech">技術要素</h3>
+      <ul class="work-tech-list">
+        <li>DXLibでの3D描画に挑戦し、海面レンダリング・流氷モデル・heightmap島の表示を実装。</li>
+        <li>
+          BFSで島領域を抽出し、グローバル流れ＋ノイズ＋迂回処理を段階合成するFlowFieldをExcelマクロで生成、ゲーム側で流氷の移動に使用。  
+          （Excelツール: <a href="https://github.com/d-tamura123/icebreaker_command/tree/main/IC_ExcelMapTool" target="_blank">IC_ExcelMapTool</a>）
+        </li>
+        <li>ベジェ曲線によるNPC交易船のルート移動を実装予定。</li>
+
+      </ul>
+
+      <!-- リンク -->
+      <h3 id="links">リンク</h3>
+      <div class="work-links">
+        <a href="https://github.com/d-tamura123/icebreaker_command"
+           class="work-link-item" target="_blank" rel="noopener">
+          <img src="../img/GitHub_Invertocat_Black_Clearspace.png" alt="GitHub" class="work-link-icon">
+          GitHub でソースコードを見る
+        </a>
+      </div>
+
+      <p class="work-detail-wrapper">
+        <a href="../works.html" class="work-detail-link">▶ Works 一覧に戻る</a>
+      </p>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 Daisuke Tamura</p>
+    </div>
+  </footer>
+
+  <script src="../js/smoothScroll.js"></script>
+</body>
+</html>
