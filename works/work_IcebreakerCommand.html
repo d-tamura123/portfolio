@@ -28,12 +28,17 @@
   </header>
 
   <main class="section">
-    <div class="container about">
+    <div class="container work-box">
 
-      <h2>Icebreaker Command（開発中）</h2>
-      <p class="works-intro">
-        FlowField に沿って自然に動く流氷を対処し、航路を防衛する逆タワーディフェンスゲームです。
+      <p style="text-align:right; margin-bottom:20px;">
+        <a href="../works.html">▶ Works 一覧に戻る</a>
       </p>
+
+      <!-- タイトル -->
+      <section class="work-header">
+        <h1>Icebreaker Command（開発中）</h1>
+        <p class="work-tagline">FlowField に沿って自然に動く流氷を対処し、航路を防衛する逆タワーディフェンスゲームです。</p>
+      </section>
 
       <!-- 動画 -->
       <h3 id="video">ティザー動画</h3>
@@ -73,7 +78,7 @@
       <!-- 技術要素 -->
       <h3 id="tech">技術要素</h3>
       <ul class="work-tech-list">
-        <li>DXLibでの3D描画に挑戦し、海面レンダリング・流氷モデル・heightmap島の表示を実装。</li>
+        <li>DXLibでの3D描画、海面レンダリング・流氷モデル・heightmap島の表示を実装。</li>
         <li>
           BFSで島領域を抽出し、グローバル流れ＋ノイズ＋迂回処理を段階合成するFlowFieldをExcelマクロで生成、ゲーム側で流氷の移動に使用。  
           （Excelツール: <a href="https://github.com/d-tamura123/icebreaker_command/tree/main/IC_ExcelMapTool" target="_blank">IC_ExcelMapTool</a>）
@@ -91,9 +96,9 @@
           GitHub でソースコードを見る
         </a>
       </div>
-
-      <p class="work-detail-wrapper">
-        <a href="../works.html" class="work-detail-link">▶ Works 一覧に戻る</a>
+      
+      <p style="text-align:right; margin-bottom:30px;">
+        <a href="../works.html">▶ Works 一覧に戻る</a>
       </p>
 
     </div>
@@ -105,6 +110,7 @@
     </div>
   </footer>
 
+  <!-- DOM 動画切り替えの青ぽち -->
   <script src="../js/smoothScroll.js"></script>
 </body>
 </html>
