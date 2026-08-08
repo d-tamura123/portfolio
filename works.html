@@ -108,6 +108,12 @@
               GitHub でソースコードを見る
             </a>
 
+            <p class="work-note">
+              ※ゲームアプリ層のロジック（ゲームループなど）は
+                <code>/000_GameDevelopment/program</code> にまとめています。
+                実際のゲームロジックを確認される際はこちらをご参照ください。
+            </p>
+
             <!-- 実行ファイルへのリンク -->
             <a href="https://dtamura.itch.io/tokyo-exorcist-2025" class="work-link-item" target="_blank" rel="noopener">
               <img src="img/itch_badge.svg"
@@ -128,20 +134,41 @@
           </h3>
 
           <!-- YouTube ティザー動画 -->
-          <div class="work-video">
-            <iframe width="560" height="315"
-              src="https://www.youtube.com/embed/ci0UxAOlrBo"
-              title="Icebreaker Command - Teaser Trailer"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-            </iframe>
+           <div class="video-slider">
 
-            <p class="works-note">
-              ※ティザームービーは AI 生成の世界観紹介映像で、実際のゲームプレイとは無関係です。
-            </p>
+           <!-- ▼ スクショ（デフォルト） -->
+           <div class="media-container active" data-type="image">
+             <img src="img/icebreaker_ss01.png" alt="IcebreakerCommand Screenshot" class="media-image lightbox-trigger">
+           </div>
 
-          </div>
+           <!-- ▼ 動画 -->
+           <div class="media-container" data-type="video">
+             <iframe src="https://www.youtube.com/embed/ci0UxAOlrBo"
+               title="Icebreaker Command - Teaser Trailer"
+               allowfullscreen></iframe>
+           </div>
+
+
+           <!-- ▼ 説明文（タブと同期して切り替え） -->
+           <div class="media-desc">
+             <p class="desc-item active" data-index="0">
+               ※ 開発中の画面です（船、コライダー、海面描画など基盤部分が動作しています）。
+             </p>
+             <p class="desc-item" data-index="1">
+               ※ ティザームービーは AI 生成の世界観紹介映像で、実際のゲームプレイとは無関係です。
+             </p>
+           </div>
+
+           <!-- ▼ タブ -->
+           <div class="video-tabs">
+             <button class="tab-button active" data-index="0">スクリーンショット</button>
+             <button class="tab-button" data-index="1">ティザー動画</button>
+           </div>
+           
+         </div>
+
+           
+         
 
           <!-- 作品の情報 -->
           <table class="work-info-table">
@@ -187,6 +214,12 @@
               GitHub でソースコードを見る
             </a>
 
+            <p class="work-note">
+              ※ゲームアプリ層のロジック（ゲームループなど）は
+                <code>/000_GameDevelopment/program</code> にまとめています。
+                実際のゲームロジックを確認される際はこちらをご参照ください。
+            </p>
+
           <!-- 詳細ページへのリンク -->
           <p class="work-detail-wrapper">
             <a href="works/work_IcebreakerCommand.html" class="work-detail-link">
@@ -202,6 +235,17 @@
           <h3 class="work-title">
             <a href="works/work_LaneRunGame.html">LANE RUSH [Prototype]</a>
           </h3>
+
+          <!-- YouTube プレイ動画 -->
+          <div class="work-video">
+            <iframe width="560" height="315"
+              src="https://www.youtube.com/embed/jixwwQiHSDc"
+              title="LANE RUSH - Gameplay"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
 
           <!-- 作品の情報 -->
           <table class="work-info-table">
@@ -246,6 +290,11 @@
               <img src="img/7uffzv9dk4sn-3AGHIcGci6RiNYtjf3Lfo2-4827a14a4409138cad096de1af549f60-drive_2026-192px.optimized.svg" alt="Google Drive" class="work-link-icon">
               実行ファイルをダウンロード（Google Drive）
             </a>
+            
+            <p class="work-note">
+              ※基本操作は WASD のみです。タイトル画面では WASD で進行し、Esc で終了します。
+            </p>
+
           </div>
 
           <!-- 詳細ページへのリンク -->
@@ -265,7 +314,14 @@
     </div>
   </footer>
   
+  <!-- スクショ拡大表示用ライトボックス -->
+  <div class="lightbox-overlay" id="lightbox-overlay">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <img src="" alt="" class="lightbox-image" id="lightbox-image">
+  </div>
+
   <!-- 詳細ページへのリンク -->
   <script src="js/smoothScroll.js"></script>
+  <script src="js/videoSlider.js"></script>
 </body>
 </html>

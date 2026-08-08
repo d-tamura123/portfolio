@@ -40,22 +40,49 @@
         <p class="work-tagline">FlowField に沿って自然に動く流氷を対処し、航路を防衛する逆タワーディフェンスゲームです。</p>
       </section>
 
-      <!-- 動画 -->
-      <h3 id="video">ティザー動画</h3>
-      <div class="work-video">
-        <iframe width="560" height="315"
-          src="https://www.youtube.com/embed/ci0UxAOlrBo"
-          title="Icebreaker Command - Teaser Trailer"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+      <!-- 動画・スクショ切り替え -->
+      <section class="work-videos">
+        <h3 id="video">ゲーム映像</h3>
 
-        <p class="works-note">
-          ※ティザームービーは AI 生成の世界観紹介映像で、実際のゲームプレイとは無関係です。
-        </p>
+        <div class="video-slider">
 
-      </div>
+          <!-- ▼ スクショ（デフォルト表示） -->
+          <div class="media-container active" data-type="image">
+            <img src="../img/icebreaker_ss01.png"
+                 alt="Icebreaker Command Screenshot"
+                 class="media-image lightbox-trigger">
+          </div>
+
+          <!-- ▼ ティザー動画 -->
+          <div class="media-container" data-type="video">
+            <iframe width="560" height="315"
+              src="https://www.youtube.com/embed/ci0UxAOlrBo"
+              title="Icebreaker Command - Teaser Trailer"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+
+            <p class="work-note">
+              ※ティザームービーは AI 生成の世界観紹介映像で、実際のゲームプレイとは無関係です。
+            </p>
+          </div>
+
+          <!-- ▼ 説明文（タブと同期） -->
+          <div class="media-desc">
+            <p class="desc-item active" data-index="0">
+              ※ 開発中の画面です（船、コライダー、海面描画など基盤部分が動作しています）。
+            </p>
+          </div>
+
+          <!-- ▼ タブ -->
+          <div class="video-tabs">
+            <button class="tab-button active" data-index="0">スクリーンショット</button>
+            <button class="tab-button" data-index="1">ティザー動画</button>
+          </div>
+
+        </div>
+      </section>
 
       <!-- 概要 -->
       <h3 id="overview">概要</h3>
@@ -110,7 +137,14 @@
     </div>
   </footer>
 
+  <!-- スクショ拡大表示用ライトボックス -->
+  <div class="lightbox-overlay" id="lightbox-overlay">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <img src="" alt="" class="lightbox-image" id="lightbox-image">
+  </div>
+
   <!-- DOM 動画切り替えの青ぽち -->
   <script src="../js/smoothScroll.js"></script>
+  <script src="../js/videoSlider.js"></script>
 </body>
 </html>
