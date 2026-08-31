@@ -36,8 +36,8 @@
 
       <!-- タイトル -->
       <section class="work-header">
-        <h1>Icebreaker Command（開発中）</h1>
-        <p class="work-tagline">FlowField に沿って自然に動く流氷を対処し、航路を防衛する逆タワーディフェンスゲームです。</p>
+        <h1>Icebreaker Command</h1>
+        <p class="work-tagline">流氷を排除し、交易船団を守り抜け。状況に応じて武器を選ぶ判断が問われる、逆タワーディフェンス海洋アクション。</p>
       </section>
 
       <!-- 動画・スクショ切り替え -->
@@ -46,11 +46,15 @@
 
         <div class="video-slider">
 
-          <!-- ▼ スクショ（デフォルト表示） -->
-          <div class="media-container active" data-type="image">
-            <img src="../img/icebreaker_ss01.png"
-                 alt="Icebreaker Command Screenshot"
-                 class="media-image lightbox-trigger">
+          <!-- ▼ プレイ動画（デフォルト表示） -->
+          <div class="media-container active" data-type="video">
+            <iframe width="560" height="315"
+              src="https://www.youtube.com/embed/y-W1R_1Ha7w"
+              title="Icebreaker Command - Gameplay"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
           </div>
 
           <!-- ▼ ティザー動画 -->
@@ -62,22 +66,21 @@
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen>
             </iframe>
-
-            <p class="work-note">
-              ※ティザームービーは AI 生成の世界観紹介映像で、実際のゲームプレイとは無関係です。
-            </p>
           </div>
 
           <!-- ▼ 説明文（タブと同期） -->
           <div class="media-desc">
             <p class="desc-item active" data-index="0">
-              ※ 開発中の画面です（船、コライダー、海面描画など基盤部分が動作しています）。
+              ※ 実際のプレイ映像です(流氷の処理〜交易船護衛の一連の流れ)。
+            </p>
+            <p class="desc-item" data-index="1">
+              ※ ティザームービーは AI 生成の世界観紹介映像で、実際のゲームプレイとは無関係です。
             </p>
           </div>
 
           <!-- ▼ タブ -->
           <div class="video-tabs">
-            <button class="tab-button active" data-index="0">スクリーンショット</button>
+            <button class="tab-button active" data-index="0">プレイ動画</button>
             <button class="tab-button" data-index="1">ティザー動画</button>
           </div>
 
@@ -93,11 +96,18 @@
         <tr>
           <td>ゲーム概要</td>
           <td>
-            温暖化の影響で流氷が増えた世界で、航路を守る国際組織「Icebreaker Command」の一員として活動するゲーム。  
-            流氷は FlowField に沿って自然に移動し、プレイヤーは砕氷船(流氷を溶かす船)を操作して NPC 交易船の航路を確保する。  
+            近未来の南極海が舞台。海上交易航路を脅かす流氷を、自ら操縦する砕氷船で排除し、
+            背後の交易船団を守り抜く、クリアの無いエンドレス形式のアクションゲーム。  
+            流氷は FlowField に沿って自然に移動し、NPC交易船は独自実装のベジェ曲線(遠心的Catmull-Rom補間)
+            ベースの航路追従AIで航行する。  
+            溶かす弾・割る弾・火炎放射の3種の武器は、射程・威力・リスクがそれぞれ異なり、
+            流氷の量・配置・距離を見て最適な手段を選ぶ判断こそが本作の核。
           </td>
         </tr>
-        <tr><td>制作期間</td><td>継続開発中（2026.6〜）</td></tr>
+        <tr>
+          <td>制作期間</td>
+          <td>ゲームループ・プレイ可能な状態までは完成(2026.6〜8)。引き続き、面白さを高めるための改善を継続中。</td>
+        </tr>
         <tr><td>開発環境</td><td>C++, DXLib（3D）</td></tr>
         <tr><td>対応入力機器</td><td>キーボード / マウス</td></tr>
       </table>
@@ -105,13 +115,16 @@
       <!-- 技術要素 -->
       <h3 id="tech">技術要素</h3>
       <ul class="work-tech-list">
-        <li>DXLibでの3D描画、海面レンダリング・流氷モデル・heightmap島の表示を実装。</li>
+        <li>DXLibでの3D描画、海面レンダリング・流氷モデル・heightmap島の表示、スカイボックス・フォグ等の環境演出を実装。</li>
         <li>
           BFSで島領域を抽出し、グローバル流れ＋ノイズ＋迂回処理を段階合成するFlowFieldをExcelマクロで生成、ゲーム側で流氷の移動に使用。  
           （Excelツール: <a href="https://github.com/d-tamura123/icebreaker_command/tree/main/IC_ExcelMapTool" target="_blank">IC_ExcelMapTool</a>）
         </li>
-        <li>ベジェ曲線によるNPC交易船のルート移動を実装予定。</li>
-
+        <li>NPC交易船は、遠心的(centripetal)Catmull-Rom補間によるベジェ曲線ベースの航路追従AIで航行(見た目のリボン表示と、実際に船が辿る経路を同一ロジックで一致させている)。</li>
+        <li>マウス操作による周回/エイム2モードのカメラシステムと、状況に応じて3種の武器を切り替える攻撃システムを実装。</li>
+        <li>Sphere/Box/Capsule/Ellipsoidの複数コライダー形状に対応した衝突判定システムを自作。押し出し・押し合いの応答ロジックも含め、スタック(詰み)状態への対策等、実機検証を重ねて安定化させた。</li>
+        <li>DXLibという低レイヤーライブラリでの3D制作は今回が初めてで、座標変換・カメラ制御まわり全般に難しさを感じた。特にミニマップでの、3Dワールド座標から2D画面座標への変換(軸の対応・符号の扱い)は苦労した点の一つ。</li>
+        <li>経験値/資金によるゲームルール、UI/HUD一式(ミニマップ・照準・武器選択・ポーズメニュー等)を自作。</li>
       </ul>
 
       <!-- リンク -->
@@ -121,6 +134,12 @@
            class="work-link-item" target="_blank" rel="noopener">
           <img src="../img/GitHub_Invertocat_Black_Clearspace.png" alt="GitHub" class="work-link-icon">
           GitHub でソースコードを見る
+        </a>
+
+        <a href="https://dtamura.itch.io/icebreaker-command"
+           class="work-link-item" target="_blank" rel="noopener">
+          <img src="../img/itch_badge.svg" alt="itch.io" class="work-link-icon">
+          itch.io で実行ファイルをダウンロード
         </a>
       </div>
       
